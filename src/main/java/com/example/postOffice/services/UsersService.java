@@ -15,15 +15,10 @@ public class UsersService {
     UsersService(UsersRepository repository) {
         this.repository = repository;
     }
-
-
     public List<User> getAllUsers(){
         return repository.findAll();
     }
-
     public Optional<User> getUser(Long id){
         return repository.findById(id);
     }
-
-
 }
