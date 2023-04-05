@@ -1,0 +1,32 @@
+Pull a request
+
+Start with:
+
+> git checkout main
+> git checkout -b dhl2-seed-users-table
+
+now do the migration
+>mvn flyway:migrate
+
+now go to sourcetree and commit the changes
+
+now check the status
+>git status
+>git push
+
+it will say "To push the current branch and set the remote as upstream, use git push --set-upstream origin dhl2-initial-migration"
+> git push --set-upstream origin dhl2-initial-migration
+
+Says it is done
+
+Click on the link to create pull request
+
+DONE!
+
+>git checkout main
+>git pull
+
+
+Now start again with:
+>git checkout main
+...
