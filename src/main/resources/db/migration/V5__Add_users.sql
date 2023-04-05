@@ -1,0 +1,15 @@
+insert into users (ID, NAME, EMAIL) values (1, 'Bilbo Baggins', 'b@email.com');
+insert into users (ID, NAME, EMAIL) values (2, 'Frodo Baggins', 'f@email.com');
+insert into users (ID, NAME, EMAIL) values (3, 'Cate', 'cate@email.com');
+insert into users (ID, NAME, EMAIL) values (4,'Diana', 'di@email.com');
+insert into users (ID, NAME, EMAIL) values (5,'Qwerty', 'qw@email.com');
+insert into users (ID, NAME, EMAIL) values (6,'Anne', 'a@email.com');
+insert into users (ID, NAME, EMAIL) values (7,'Barbie', 'b@email.com');
+insert into users (ID, NAME, EMAIL) values (8,'Charlie', 'c@email.com');
+insert into users (ID, NAME, EMAIL) values (9,'Dimitri', 'd@email.com');
+insert into users (ID, NAME, EMAIL) values (10,'Francis', 'f@email.com');
+insert into users (ID, NAME, EMAIL) values (11,'Gwen', 'g@email.com');
+insert into users (ID, NAME, EMAIL) values (12,'Harry', 'h@email.com');
+insert into users (ID, NAME, EMAIL) values (13,'Iris',  'i@email.com');
+insert into users (ID, NAME, EMAIL) values (14,'John',  'j@email.com');
+insert into users (ID, NAME, EMAIL) values (15,'Kate', 'k@email.com');
