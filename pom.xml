@@ -10,9 +10,9 @@
 		<!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.library</groupId>
-	<artifactId>garments</artifactId>
+	<artifactId>postOffice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>garments</name>
+	<name>postOffice</name>
 	<description>Many to Many Relationship Example in Spring Boot Application</description>
 	<properties>
 		<java.version>11</java.version>
@@ -52,6 +52,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>8.5.13</version>
+				<configuration>
+					<user>postgres</user>
+					<password>alice</password>
+					<url>jdbc:postgresql://localhost:5432/postoffice</url>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
