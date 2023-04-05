@@ -1,6 +1,5 @@
-package com.example.postOffice;
+package com.example.postOffice.LoadDatabase;
 
-import com.example.postOffice.models.Country;
 import com.example.postOffice.repository.CountriesRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

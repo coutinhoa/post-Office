@@ -1,5 +1,4 @@
-package com.example.postOffice;
-import com.example.postOffice.models.User;
+package com.example.postOffice.LoadDatabase;
 import com.example.postOffice.repository.UsersRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
