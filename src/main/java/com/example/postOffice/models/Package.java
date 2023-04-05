@@ -6,6 +6,9 @@ import org.hibernate.Internal;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import java.sql.Timestamp;
+import java.util.Date;
+
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 
@@ -17,12 +20,12 @@ public class Package {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
     private double weight;
-    private String delivery_date;
+    private Date delivery_date;
 
     Package() {
     }
 
-    public Package( double weight, String delivery_date) {
+    public Package( double weight, Date delivery_date) {
         this.weight = weight;
         this.delivery_date = delivery_date;
     }
@@ -33,7 +36,7 @@ public class Package {
     public double getWeight() {
         return this.weight;
     }
-    public String getDelivery_date() {
+    public Date getDelivery_date() {
         return this.delivery_date;
     }
 
