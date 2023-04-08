@@ -22,6 +22,15 @@ public class Package {
     private double weight;
     private Date delivery_date;
 
+
+    @ManyToOne
+    @JoinColumn(name="sender_id", nullable=false)
+    @JoinColumn(name="addressee_id", nullable=false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
+    private User user;
+
+
     Package() {
     }
 

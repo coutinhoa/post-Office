@@ -1,6 +1,9 @@
 package com.example.postOffice.models;
 
 import jakarta.persistence.*;
+
+import java.util.Set;
+
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 
@@ -15,9 +18,9 @@ public class User {
     private String email;
 
 
-    /*@OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user")
     private Set<Package> packages;
-*/
+
 
 
     User() {
