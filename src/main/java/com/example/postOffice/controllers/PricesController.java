@@ -1,6 +1,6 @@
 package com.example.postOffice.controllers;
 
-import com.example.postOffice.models.Package;
+import com.example.postOffice.models.Price;
 import com.example.postOffice.services.PricesService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,12 +20,12 @@ class PricesController {
 
 
     @GetMapping("/packages/price")
-    List<Package> all() {
-        List<Package> packages= service.getAllPrices();
-        return packages;
+    List<Price> all() {
+        List<Price> prices= service.getAllPrices();
+        return prices;
     }
     @GetMapping("/package/{id}/price")
-    Optional<Package> getPriceOfPackage(@PathVariable Long id) {
+    Optional<Price> getPriceOfPackage(@PathVariable Long id) {
         return service.getPricePackage(id);
     }
 

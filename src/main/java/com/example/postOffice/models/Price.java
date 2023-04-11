@@ -1,9 +1,6 @@
 package com.example.postOffice.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -16,6 +13,18 @@ public class Price {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
     private double price;
+
+    @ManyToOne
+    @JoinColumn(name="senderCountry")
+    private Country senderCountry;
+
+    @ManyToOne
+    @JoinColumn(name="addresseeCountry")
+    private Country addresseeCountry;
+
+
+
+
 
     Price() {
     }

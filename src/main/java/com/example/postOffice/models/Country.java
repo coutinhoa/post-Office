@@ -1,12 +1,6 @@
 package com.example.postOffice.models;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
-
-import java.util.Optional;
 import java.util.Set;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
@@ -21,11 +15,17 @@ public class Country {
     private String name;
 
 
-    @OneToMany(mappedBy = "senderCountry")
+    @OneToMany(mappedBy = "sender_country")
     private Set<Package> sender_country;
 
-    @OneToMany(mappedBy = "addresseeCountry")
+    @OneToMany(mappedBy = "addressee_country")
     private Set<Package> addressee_country;
+
+    /*@OneToMany(mappedBy = "senderCountry")
+    private Set<Price> senderCountry;
+
+    @OneToMany(mappedBy = "addresseeCountry")
+    private Set<Price> addresseeCountry;*/
 
     Country() {
     }

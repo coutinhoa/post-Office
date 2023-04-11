@@ -17,7 +17,7 @@ class PackagesController {
     }
 
 
-    @GetMapping("/users/packages")
+    @GetMapping("/packages")
     List<Package> all() {
         List<Package> packages= service.getAllPackages();
         return packages;

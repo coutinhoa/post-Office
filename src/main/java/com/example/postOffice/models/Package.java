@@ -29,11 +29,11 @@ public class Package {
 
     @ManyToOne
     @JoinColumn(name="sender_country")
-    private Country senderCountry;
+    private Country sender_country;
 
     @ManyToOne
     @JoinColumn(name="addressee_country")
-    private Country addresseeCountry;
+    private Country addressee_country;
 
 
     public Package() {
