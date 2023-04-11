@@ -18,10 +18,11 @@ public class User {
     private String email;
 
 
-    @OneToMany(mappedBy = "user")
-    private Set<Package> packages;
+    @OneToMany(mappedBy = "sender")
+    private Set<Package> packages_sent;
 
-
+    @OneToMany(mappedBy = "addressee")
+    private Set<Package> packages_received;
 
     User() {
     }

@@ -1,12 +1,7 @@
 package com.example.postOffice.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import org.hibernate.Internal;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
-import java.sql.Timestamp;
 import java.util.Date;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
@@ -24,14 +19,17 @@ public class Package {
 
 
     @ManyToOne
-    @JoinColumn(name="sender_id", nullable=false)
-    @JoinColumn(name="addressee_id", nullable=false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private User user;
+    @JoinColumn(name="sender_id")
+    private User sender;
+
+    @ManyToOne
+    @JoinColumn(name="addressee_id")
+    private User addressee;
 
 
-    Package() {
+    public Package() {
+
+
     }
 
     public Package( double weight, Date delivery_date) {
