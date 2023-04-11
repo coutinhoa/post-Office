@@ -27,6 +27,15 @@ public class Package {
     private User addressee;
 
 
+    @ManyToOne
+    @JoinColumn(name="sender_country")
+    private Country senderCountry;
+
+    @ManyToOne
+    @JoinColumn(name="addressee_country")
+    private Country addresseeCountry;
+
+
     public Package() {
 
 

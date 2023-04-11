@@ -7,6 +7,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 
 import java.util.Optional;
+import java.util.Set;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -19,6 +20,12 @@ public class Country {
     private Long id;
     private String name;
 
+
+    @OneToMany(mappedBy = "senderCountry")
+    private Set<Package> sender_country;
+
+    @OneToMany(mappedBy = "addresseeCountry")
+    private Set<Package> addressee_country;
 
     Country() {
     }
