@@ -1,0 +1,9 @@
+update packages set sender_country=5, addressee_country=1 where id=1;
+update packages set sender_country=3, addressee_country=5 where id=2;
+update packages set sender_country=4, addressee_country=1 where id=3;
+update packages set sender_country=3, addressee_country=4 where id=4;
+update packages set sender_country=1, addressee_country=1 where id=5;
+update packages set sender_country=2, addressee_country=1 where id=6;
+update packages set sender_country=2, addressee_country=2 where id=7;
+update packages set sender_country=4, addressee_country=5 where id=8;
+update packages set sender_country=2, addressee_country=3 where id=9;
