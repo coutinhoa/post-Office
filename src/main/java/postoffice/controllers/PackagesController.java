@@ -1,10 +1,10 @@
-package com.example.postOffice.controllers;
+package postoffice.controllers;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.example.postOffice.models.Package;
-import com.example.postOffice.services.PackagesService;
+import postoffice.models.Package;
+import postoffice.services.PackagesService;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
@@ -21,7 +21,7 @@ class PackagesController {
         List<Package> packages= service.getAllPackages();
         return packages;
     }
-    @GetMapping("/packages/{id}")
+    @GetMapping("/users/{id}/packages")
     Optional<Package> getPackageByUser(@PathVariable Long id) {
         return service.getPackageUser(id);
     }

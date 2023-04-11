@@ -1,15 +1,14 @@
-package com.example.postOffice.controllers;
+package postoffice.controllers;
 
-import com.example.postOffice.models.User;
-import com.example.postOffice.services.UsersService;
+import postoffice.models.User;
+import postoffice.services.UsersService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin("*")
+@CrossOrigin(origins = "http://localhost:8888", methods={RequestMethod.GET})
 @RestController
-//@RequestMapping("/users")
 class UsersController {
 
     private final UsersService service;
