@@ -17,7 +17,7 @@ class CountriesController {
         this.service = service;
     }
 
-    @GetMapping("/users/countries")
+    @GetMapping("/countries")
     List<Country> all() {
         List<Country> countries= service.getAllCountries();
         return countries;
