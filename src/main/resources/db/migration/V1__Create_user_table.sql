@@ -1,5 +1,5 @@
 create table users (
-    ID int not null,
+    ID serial PRIMARY KEY,
     NAME VARCHAR(100) not null,
     EMAIL VARCHAR(100) not null
 );

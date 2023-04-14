@@ -41,11 +41,27 @@ public class Country {
         return this.name;
     }
 
+  /*  public Set<Package> getSenderCountry() {
+        return this.sender_country;
+    }
+
+    public Set<Package> getAddresseeCountry() {
+        return this.addressee_country;
+    }*/
+
     public void setId(Long id) {
         this.id = id;
     }
     public void setName(String name) {
         this.name=name;
     }
+
+   /*public void setSenderCoutry() {
+        this.sender_country= sender_country;
+    }
+
+    public void setAddressee_country() {
+        this.addressee_country= addressee_country;
+    }*/
 
 }
