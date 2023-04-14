@@ -15,16 +15,10 @@ class PricesController {
         this.service = service;
     }
 
-
     @GetMapping("/prices")
     List<Price> all() {
         List<Price> prices= service.getAllPrices();
         return prices;
     }
-    @GetMapping("/prices/{id}")
-    Optional<Price> getPriceOfPackage(@PathVariable Long id) {
-        return service.getPricePackage(id);
-    }
-
 
 }

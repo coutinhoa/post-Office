@@ -3,6 +3,7 @@ package com.example.postOffice.controllers;
 import java.util.List;
 import java.util.Optional;
 
+import com.example.postOffice.dto.CreatePackageDTO;
 import com.example.postOffice.models.Package;
 import com.example.postOffice.services.PackagesService;
 import org.springframework.web.bind.annotation.*;
@@ -26,5 +27,9 @@ class PackagesController {
         return service.getPackageUser(id);
     }
 
+    @PostMapping("/package")
+    Package newPackage(@RequestBody CreatePackageDTO newPackage){
+        return service.createPackage(newPackage);
+    }
 
 }

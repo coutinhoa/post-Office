@@ -1,5 +1,5 @@
 create table packages (
-    ID int not null,
-    WEIGHT DECIMAL not null,
-    DELIVERY_DATE DATE not null
+    ID serial PRIMARY KEY,
+    WEIGHT FLOAT not null,
+    DELIVERY_DATE TIMESTAMP not null
 );

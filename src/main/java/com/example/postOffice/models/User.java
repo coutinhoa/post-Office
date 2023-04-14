@@ -1,9 +1,11 @@
 package com.example.postOffice.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.Set;
-
+import java.util.List;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 
@@ -19,10 +21,12 @@ public class User {
 
 
     @OneToMany(mappedBy = "sender")
-    private Set<Package> packages_sent;
+    @JsonIgnore
+    private List<Package> packages_sent;
+
 
     @OneToMany(mappedBy = "addressee")
-    private Set<Package> packages_received;
+    private List<Package> packages_received;
 
     User() {
     }
@@ -43,6 +47,15 @@ public class User {
         return this.email;
     }
 
+    /*public List<Package> getPackagesSent() {
+        return this.packages_sent;
+    }
+
+    /*public List<Package> getPackagesReceived() {
+        return this.packages_received;
+    }*/
+
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -52,6 +65,15 @@ public class User {
     public void setEmail(String email) {
         this.email= email;
     }
+
+    /*public void setPackagesSent(List<Package> packagesSent) {
+        this.packages_sent= packagesSent;
+    }
+
+    /*public void setPackagesReceived(List<Package> packagesReceived) {
+        this.packages_received= packagesReceived;
+    }*/
+
 
 
 }
