@@ -21,11 +21,11 @@ public class Country {
     @OneToMany(mappedBy = "addressee_country")
     private Set<Package> addressee_country;
 
-    /*@OneToMany(mappedBy = "senderCountry")
+    @OneToMany(mappedBy = "senderCountry")
     private Set<Price> senderCountry;
 
     @OneToMany(mappedBy = "addresseeCountry")
-    private Set<Price> addresseeCountry;*/
+    private Set<Price> addresseeCountry;
 
     Country() {
     }
