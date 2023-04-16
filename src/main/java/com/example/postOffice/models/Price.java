@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 
@@ -16,11 +18,15 @@ public class Price {
     private Long id;
     private double price;
 
-    private Long senderCountryId;
+    @ManyToOne
+    @JoinColumn(name="sender_country_id", nullable = false, referencedColumnName = "id")
+    private Country senderCountry;
 
-    private Long addresseeCountryId;
+    @ManyToOne
+    @JoinColumn(name="addressee_country_id", nullable = false, referencedColumnName = "id")
+    private Country addresseeCountry;
 
-    Price() {
+    public Price() {
     }
 
     public Price(double price) {
@@ -32,13 +38,12 @@ public class Price {
     public double getPrice() {
         return this.price;
     }
-
-    public Long getSenderCountry() {
-        return this.senderCountryId;
+    public Country getSenderCountry() {
+        return this.senderCountry;
     }
 
-    public Long getAddresseeCountry() {
-        return this.addresseeCountryId;
+    public Country getAddresseeCountry() {
+        return this.addresseeCountry;
     }
     public void setId(Long id) {
         this.id = id;
@@ -47,11 +52,11 @@ public class Price {
         this.price = price;
     }
 
-    public void setSenderCountry(Long senderCountry) {
-        this.senderCountryId =senderCountry;
+    public void setSenderCountry(Country senderCountry) {
+        this.senderCountry =senderCountry;
     }
-    public void setAddresseeCountry(Long addresseeCountry) {
-        this.addresseeCountryId = addresseeCountry;
+    public void setAddresseeCountry(Country addresseeCountry) {
+        this.addresseeCountry = addresseeCountry;
     }
 
 
