@@ -15,6 +15,7 @@ public class Package {
     private Long id;
     private double weight;
     private Date delivery_date;
+    private double delivery_price;
 
     @ManyToOne
     @JoinColumn(name="sender_id")
@@ -35,9 +36,11 @@ public class Package {
     public Package() {
     }
 
-    public Package( double weight, Date delivery_date) {
+    public Package( double weight, Date delivery_date, double delivery_price) {
         this.weight = weight;
-        this.delivery_date = delivery_date;}
+        this.delivery_date = delivery_date;
+        this.delivery_price =delivery_price;
+    }
 
     public Long getId() {
         return this.id;
@@ -65,7 +68,9 @@ public class Package {
         return this.addressee_country;
     }
 
-
+    public Double getDelivery_price() {
+        return this.delivery_price;
+    }
     public void setId(Long id) {
         this.id = id;
     }
@@ -90,6 +95,10 @@ public class Package {
 
     public void setAddressee_country(Country addressee) {
         this.addressee_country= addressee;
+    }
+
+    public void setDelivery_price(Double delivery_price) {
+        this.delivery_price= delivery_price;
     }
 
 }
