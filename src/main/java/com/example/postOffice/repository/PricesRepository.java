@@ -10,4 +10,6 @@ public interface PricesRepository extends JpaRepository<Price, Long> {
     List<Price> findAll();
     Optional<Price> findById(Long id);
 
+    Optional<Price> findBySenderCountryIdAndAddresseeCountryId(Long sender, Long addressee);
+
 }
